@@ -1,0 +1,39 @@
+## test1: all valid tokens showcase
+
+start
+declare Count_1 = 42;
+declare Rate = -0.123456;
+declare Exp = 1.5e10;
+declare Exp2 = 2.0E-3;
+declare Flag = true;
+declare Flag2 = false;
+
+declare Msg = "Hello\\nWorld\\t\\rDone: \\\"OK\\\" \\\\";
+declare Ch1 = 'A';
+declare Ch2 = '\\n';
+declare Ch3 = '\\t';
+declare Ch4 = '\\r';
+declare Ch5 = '\\\\';
+declare Ch6 = '\\'';
+
+## operators
+Count_1++;
+Count_1--;
+Count_1 += 5;
+Count_1 -= 2;
+Count_1 *= 3;
+Count_1 /= 2;
+Count_1 = Count_1 + 10 * 2 / 4 % 3 ** 2;
+
+condition (Count_1 >= 10 && Count_1 != 11 || !false) { output(Msg); }
+else { input(Count_1); }
+
+## punctuators coverage: ( ) { } [ ] , ; :
+output(Count_1, Rate, Exp2);
+declare List = [1,2,3];
+
+function DoWork() { return; }
+break;
+continue;
+
+finish

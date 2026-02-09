@@ -1,0 +1,18 @@
+## test3: strings + chars (valid escapes)
+
+start
+declare S1 = "Quote: \\\" backslash: \\\\";
+declare S2 = "Line1\\nLine2\\tTabbed\\rCarriage";
+declare S3 = "Mix: \\\"A\\\" \\\\ \\n \\t \\r end";
+
+declare C1 = '\\n';
+declare C2 = '\\t';
+declare C3 = '\\r';
+declare C4 = '\\\\';
+declare C5 = '\\'';
+declare C6 = 'Z';
+
+output(S1);
+output(S2);
+output(S3);
+finish

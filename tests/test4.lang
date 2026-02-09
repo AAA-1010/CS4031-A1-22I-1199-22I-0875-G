@@ -1,0 +1,35 @@
+## test4: lexical errors (scanner should report and continue)
+
+start
+
+## invalid characters examples in assignment :contentReference[oaicite:16]{index=16}
+declare BadChar1 = @;
+declare BadChar2 = $;
+
+## invalid identifiers (must start A-Z; then lowercase/digits/_; max length) :contentReference[oaicite:17]{index=17}
+declare count = 1;
+declare 2Count = 2;
+declare MyVarX = 3;
+declare _Variable = 4;
+
+## too long identifier (should fail if > 31)
+declare Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = 0;
+
+## malformed numbers (invalid examples in assignment) :contentReference[oaicite:18]{index=18}
+declare BadFloat1 = 3.;
+declare BadFloat2 = .14;
+declare BadFloat3 = 1.2345678;
+declare BadFloat4 = 12.3.4;
+declare BadInt1 = 1,000;
+
+## unterminated string (error type required) :contentReference[oaicite:19]{index=19}
+declare BadStr1 = "Hello World
+declare AfterBadStr = 5;
+
+## invalid escape in string
+declare BadStr2 = "Bad escape: \\x";
+
+## unclosed multi-line comment (error type required) :contentReference[oaicite:20]{index=20}
+#* this comment never closes...
+
+finish

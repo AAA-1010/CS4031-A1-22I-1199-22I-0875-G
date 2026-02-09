@@ -1,0 +1,20 @@
+## test2: complex nested expressions
+
+start
+declare A = 10;
+declare B = -20;
+declare C = 3.141592;
+declare D = 2.5e2;
+declare E = 7;
+
+declare R1 = ((A + B) * (E - 3) / 2) % 5;
+declare R2 = (A ** 2) + (B * (E + 4)) - (D / (C + 1.0));
+declare R3 = (((A + 1) ** (2)) ** (3)) / 2;
+
+condition ( (A + 5) >= (E * 2) && (B != -20) || !(A < 0) ) {
+    output(R1);
+} else {
+    output(R2);
+}
+
+finish

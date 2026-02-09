@@ -1,0 +1,11 @@
+﻿# Java build output
+*.class
+out/
+bin/
+target/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

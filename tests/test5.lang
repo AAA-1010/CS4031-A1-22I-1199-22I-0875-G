@@ -1,0 +1,19 @@
+## test5: comment handling
+
+start
+## single-line comment should be ignored :contentReference[oaicite:21]{index=21}
+declare X = 1; ## trailing comment after code
+
+#* multi-line comment should be ignored :contentReference[oaicite:22]{index=22}
+   declare Y = 999;
+   X += 10;
+*#
+
+## comment-like text inside a string should NOT be treated as comment
+declare S = "This is not a comment: ## hello";
+declare T = "Also not a comment: #* inside string *#";
+
+output(S);
+output(T);
+
+finish
