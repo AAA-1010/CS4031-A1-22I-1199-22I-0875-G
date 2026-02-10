@@ -3,7 +3,7 @@
 
 **Team**
 - 22I-1199 - Ali Aamir - Section G
-- 22I-0875 - Dawood - Section G
+- 22I-0875 - Dawood Cheema - Section G
 
 ## Language Info
 - **Language name:** MyLang
