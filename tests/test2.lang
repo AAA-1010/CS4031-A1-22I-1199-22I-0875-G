@@ -1,20 +1,59 @@
-## test2: complex nested expressions
+## test2.lang — complex valid mixes (7-token scope only)
 
-start
-declare A = 10;
-declare B = -20;
-declare C = 3.141592;
-declare D = 2.5e2;
-declare E = 7;
+## Many identifiers (repeated to test symbol table frequency)
+Alpha
+Beta_1
+Gamma2
+Alpha
+Alpha
+Beta_1
 
-declare R1 = ((A + B) * (E - 3) / 2) % 5;
-declare R2 = (A ** 2) + (B * (E + 4)) - (D / (C + 1.0));
-declare R3 = (((A + 1) ** (2)) ** (3)) / 2;
+## Integers (signed + zero)
+0
+10
+-20
++7
+999
 
-condition ( (A + 5) >= (E * 2) && (B != -20) || !(A < 0) ) {
-    output(R1);
-} else {
-    output(R2);
-}
+## Floats (max 6 decimals + exponent)
+3.141592
+2.5e2
+1.000000
+-0.500001
+9.999999e+2
+2.0E-3
 
-finish
+## Booleans mixed in
+true
+false
+true
+
+## Strings mixed in (with escapes)
+"Sum\\n"
+"Tab\\t"
+"Carriage\\r"
+"Quote: \\\"Hello\\\""
+"Backslash: \\\\"
+"Mix: A\\nB\\tC\\rD \\\\ \\\"end\\\""
+
+## Chars mixed in (incl escapes)
+'A'
+'Z'
+'0'
+'\n'
+'\t'
+'\r'
+'\\'
+'\''
+
+## Comments inserted between tokens
+## single-line comment: ignore everything here
+Alpha
+#* multi-line comment start
+Beta_1 123 4.56 true "hello" '\n'
+Should be ignored until end
+*#
+Gamma2
+
+## End tokens
+Finish

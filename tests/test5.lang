@@ -1,19 +1,30 @@
-## test5: comment handling
+## test5.lang — comment handling (7-token scope only)
 
-start
-## single-line comment should be ignored :contentReference[oaicite:21]{index=21}
-declare X = 1; ## trailing comment after code
+## single-line comment should be ignored
 
-#* multi-line comment should be ignored :contentReference[oaicite:22]{index=22}
-   declare Y = 999;
-   X += 10;
+X
+1
+## trailing comment after tokens
+
+#* multi-line comment should be ignored
+Inside comment: X 999 12.345 true "hi" '\n'
+Also includes symbols: = ; + ( ) { } [ ] , && || !!
+None of this should produce tokens.
 *#
 
-## comment-like text inside a string should NOT be treated as comment
-declare S = "This is not a comment: ## hello";
-declare T = "Also not a comment: #* inside string *#";
+S
+"This is not a comment: ## hello"
+T
+"Also not a comment: #* inside string *#"
 
-output(S);
-output(T);
+## more single-line comments
+## another one
 
-finish
+Flag
+true
+
+#* comment with many stars ********
+Still comment
+*#
+
+Finish

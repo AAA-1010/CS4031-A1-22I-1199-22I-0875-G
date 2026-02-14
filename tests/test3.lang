@@ -1,18 +1,31 @@
-## test3: strings + chars (valid escapes)
+## test3.lang — strings & chars (7-token scope)
 
-start
-declare S1 = "Quote: \\\" backslash: \\\\";
-declare S2 = "Line1\\nLine2\\tTabbed\\rCarriage";
-declare S3 = "Mix: \\\"A\\\" \\\\ \\n \\t \\r end";
+## VALID STRINGS
+"Quote: \" backslash: \\"
+"Line1\nLine2\tTabbed\rCarriage"
+"Mix: \"A\" \\ \n \t \r end"
+"Just text"
+"Escapes: \\ \" \n \t \r"
 
-declare C1 = '\\n';
-declare C2 = '\\t';
-declare C3 = '\\r';
-declare C4 = '\\\\';
-declare C5 = '\\'';
-declare C6 = 'Z';
+## VALID CHARS
+'A'
+'Z'
+'0'
+'\n'
+'\t'
+'\r'
+'\\'
+'\''
 
-output(S1);
-output(S2);
-output(S3);
-finish
+## CONTROLLED ERRORS (scanner must recover and continue)
+
+"bad escape: \q"
+"unterminated string
+'bad escape: \q'
+'AB'
+'
+
+## AFTER ERRORS — valid tokens should still be recognized
+After
+"ok"
+'\n'
