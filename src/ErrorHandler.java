@@ -8,30 +8,51 @@ import java.util.List;
  */
 public class ErrorHandler {
 
+    /** Categories of lexical errors (useful for consistent reporting). */
+    public enum ErrorType {
+        INVALID_CHARACTER,
+        MALFORMED_LITERAL,
+        INVALID_IDENTIFIER,
+        UNCLOSED_MULTILINE_COMMENT
+    }
+
     public static final class LexicalError {
-        private final String message;
+        private final ErrorType type;
         private final int line;
         private final int column;
-        private final String fragment;
+        private final String lexeme;
+        private final String reason;
 
-        public LexicalError(String message, int line, int column, String fragment) {
-            this.message = message;
+        public LexicalError(ErrorType type, int line, int column, String lexeme, String reason) {
+            this.type = type;
             this.line = line;
             this.column = column;
-            this.fragment = fragment;
+            this.lexeme = lexeme;
+            this.reason = reason;
         }
+
+        public ErrorType getType() { return type; }
+        public int getLine() { return line; }
+        public int getColumn() { return column; }
+        public String getLexeme() { return lexeme; }
+        public String getReason() { return reason; }
 
         @Override
         public String toString() {
-            return String.format("[LEXICAL ERROR] Line %d, Col %d: %s (near: \"%s\")",
-                    line, column, message, fragment == null ? "" : fragment);
+            return String.format("ERROR [%s] Line %d, Col %d | Lexeme=\"%s\" | Reason=%s",
+                    type.name(),
+                    line,
+                    column,
+                    lexeme == null ? "" : lexeme.replace("\"", "\\\""),
+                    reason == null ? "" : reason);
         }
     }
 
     private final List<LexicalError> errors = new ArrayList<>();
 
-    public void report(String message, int line, int column, String fragment) {
-        errors.add(new LexicalError(message, line, column, fragment));
+    /** Main report method used by scanners. */
+    public void report(ErrorType type, int line, int column, String lexeme, String reason) {
+        errors.add(new LexicalError(type, line, column, lexeme, reason));
     }
 
     public boolean hasErrors() {
@@ -51,7 +72,7 @@ public class ErrorHandler {
             return sb.toString();
         }
         for (LexicalError e : errors) {
-            sb.append(e.toString()).append("\n");
+            sb.append(e).append("\n");
         }
         return sb.toString();
     }

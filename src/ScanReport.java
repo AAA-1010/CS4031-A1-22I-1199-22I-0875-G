@@ -20,10 +20,20 @@ public class ScanReport {
         if (t.isIdentifier()) symbolTable.observeIdentifier(t);
     }
 
-    public void addError(String message, int line, int col, String fragment) {
-        errorHandler.report(message, line, col, fragment);
-        statistics.incrementError();
+    public void addError(ErrorHandler.ErrorType type, int line, int col, String lexeme, String reason) 
+    {
+    errorHandler.report(type, line, col, lexeme, reason);
+    statistics.updateLine(line);
     }
+
+    public void noteWhitespace(int line1Based) {
+    statistics.incrementWhitespaceSeen(line1Based);
+    }
+
+    public void noteCommentRemoved(int line1Based) {
+        statistics.incrementCommentRemoved(line1Based);
+    }
+
 
     public List<Token> getTokens() { return tokens; }
     public SymbolTable getSymbolTable() { return symbolTable; }

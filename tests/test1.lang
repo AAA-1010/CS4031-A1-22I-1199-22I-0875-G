@@ -1,39 +1,72 @@
-## test1: all valid tokens showcase
+## test1.lang — VALID TOKENS ONLY (7 categories)
 
-start
-declare Count_1 = 42;
-declare Rate = -0.123456;
-declare Exp = 1.5e10;
-declare Exp2 = 2.0E-3;
-declare Flag = true;
-declare Flag2 = false;
+## Identifiers (must start with uppercase)
+Count_1
+Rate
+Exp
+Exp2
+Flag
+Flag2
+Msg
+Ch1
+Ch2
+Ch3
+Ch4
+Ch5
+Ch6
+Upper
+A
+Z9_
+A_0a1b2c3d4e5f6g7h8i9j0k1l2m3n4
 
-declare Msg = "Hello\\nWorld\\t\\rDone: \\\"OK\\\" \\\\";
-declare Ch1 = 'A';
-declare Ch2 = '\\n';
-declare Ch3 = '\\t';
-declare Ch4 = '\\r';
-declare Ch5 = '\\\\';
-declare Ch6 = '\\'';
+## Integer literals (optional sign)
+0
+7
+42
++12
+-9999
 
-## operators
-Count_1++;
-Count_1--;
-Count_1 += 5;
-Count_1 -= 2;
-Count_1 *= 3;
-Count_1 /= 2;
-Count_1 = Count_1 + 10 * 2 / 4 % 3 ** 2;
+## Float literals (1–6 decimals + optional exponent)
+0.1
+12.123456
+-0.123456
++5.000001
+1.5e10
+2.0E-3
+9.999999e+2
 
-condition (Count_1 >= 10 && Count_1 != 11 || !false) { output(Msg); }
-else { input(Count_1); }
+## Boolean literals
+true
+false
 
-## punctuators coverage: ( ) { } [ ] , ; :
-output(Count_1, Rate, Exp2);
-declare List = [1,2,3];
+## String literals (valid escapes only)
+"Hello"
+"Hello\\nWorld"
+"Tab\\tHere"
+"Carriage\\rReturn"
+"Quote: \\\"OK\\\""
+"Backslash: \\\\"
+"Mix: A\\nB\\tC\\rD \\\\ \\\"end\\\""
 
-function DoWork() { return; }
-break;
-continue;
+## Character literals (single char or valid escape)
+'A'
+'Z'
+'0'
+'\n'
+'\t'
+'\r'
+'\\'
+'\''
 
-finish
+ 
+## Comments (should be skipped but counted)
+## single-line comment: all ignored after ##
+## another comment with symbols: = + ; () {} [] , etc.
+
+#* multi-line comment start
+This whole block is a comment.
+It can include anything, even ## or quotes "like this".
+It ends when we reach STAR-HASH.
+*#
+
+#* comment ending with many stars ***#
