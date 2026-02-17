@@ -1,6 +1,5 @@
 ﻿CS4031 Assignment 1 — MyLang — JFlex Scanner Outputs
-Group: 22I-1199 & 22I-0875 | Section: G
-Generated on: 02/14/2026 22:32:54
+Group: Ali Aamir 22I-1199 & Dawood Cheema 22I-0875 | Section: G
 
 ============================================================
 
@@ -304,4 +303,312 @@ ERRORS
 ------
 No lexical errors.
 
+============================================================
+
+CS4031 Assignment 1 — MyLang — Manual Scanner Outputs
+Group: Ali Aamir 22I-1199 & Dawood Cheema 22I-0875 | Section: G
+
+============================================================
+
+==================== TEST 1 (test1.lang) ====================
+<IDENTIFIER, "Count_1", Line: 4, Col: 1>
+<IDENTIFIER, "Rate", Line: 5, Col: 1>
+<IDENTIFIER, "Exp", Line: 6, Col: 1>
+<IDENTIFIER, "Exp2", Line: 7, Col: 1>
+<IDENTIFIER, "Flag", Line: 8, Col: 1>
+<IDENTIFIER, "Flag2", Line: 9, Col: 1>
+<IDENTIFIER, "Msg", Line: 10, Col: 1>
+<IDENTIFIER, "Ch1", Line: 11, Col: 1>
+<IDENTIFIER, "Ch2", Line: 12, Col: 1>
+<IDENTIFIER, "Ch3", Line: 13, Col: 1>
+<IDENTIFIER, "Ch4", Line: 14, Col: 1>
+<IDENTIFIER, "Ch5", Line: 15, Col: 1>
+<IDENTIFIER, "Ch6", Line: 16, Col: 1>
+<IDENTIFIER, "Upper", Line: 17, Col: 1>
+<IDENTIFIER, "A", Line: 18, Col: 1>
+<IDENTIFIER, "Z9_", Line: 19, Col: 1>
+<IDENTIFIER, "A_0a1b2c3d4e5f6g7h8i9j0k1l2m3n4", Line: 20, Col: 1>
+<INT_LITERAL, "0", Line: 23, Col: 1>
+<INT_LITERAL, "7", Line: 24, Col: 1>
+<INT_LITERAL, "42", Line: 25, Col: 1>
+<OP_ARITHMETIC, "+", Line: 26, Col: 1>
+<INT_LITERAL, "12", Line: 26, Col: 2>
+<OP_ARITHMETIC, "-", Line: 27, Col: 1>
+<INT_LITERAL, "9999", Line: 27, Col: 2>
+<FLOAT_LITERAL, "0.1", Line: 30, Col: 1>
+<FLOAT_LITERAL, "12.123456", Line: 31, Col: 1>
+<OP_ARITHMETIC, "-", Line: 32, Col: 1>
+<FLOAT_LITERAL, "0.123456", Line: 32, Col: 2>
+<OP_ARITHMETIC, "+", Line: 33, Col: 1>
+<FLOAT_LITERAL, "5.000001", Line: 33, Col: 2>
+<FLOAT_LITERAL, "1.5e10", Line: 34, Col: 1>
+<FLOAT_LITERAL, "2.0E-3", Line: 35, Col: 1>
+<FLOAT_LITERAL, "9.999999e+2", Line: 36, Col: 1>
+<BOOL_LITERAL, "true", Line: 39, Col: 1>
+<BOOL_LITERAL, "false", Line: 40, Col: 1>
+<STRING_LITERAL, "\"Hello\"", Line: 43, Col: 1>
+<STRING_LITERAL, "\"Hello\\\\nWorld\"", Line: 44, Col: 1>
+<STRING_LITERAL, "\"Tab\\\\tHere\"", Line: 45, Col: 1>
+<STRING_LITERAL, "\"Carriage\\\\rReturn\"", Line: 46, Col: 1>
+<STRING_LITERAL, "\"Quote: \\\\\\\"OK\\\\\\\"\"", Line: 47, Col: 1>
+<STRING_LITERAL, "\"Backslash: \\\\\\\\\"", Line: 48, Col: 1>
+<STRING_LITERAL, "\"Mix: A\\\\nB\\\\tC\\\\rD \\\\\\\\ \\\\\\\"end\\\\\\\"\"", Line: 49, Col: 1>
+<CHAR_LITERAL, "'A'", Line: 52, Col: 1>
+<CHAR_LITERAL, "'Z'", Line: 53, Col: 1>
+<CHAR_LITERAL, "'0'", Line: 54, Col: 1>
+<CHAR_LITERAL, "'\\n'", Line: 55, Col: 1>
+<CHAR_LITERAL, "'\\t'", Line: 56, Col: 1>
+<CHAR_LITERAL, "'\\r'", Line: 57, Col: 1>
+<CHAR_LITERAL, "'\\\\'", Line: 58, Col: 1>
+<CHAR_LITERAL, "'\\''", Line: 59, Col: 1>
+<EOF, "", Line: 73, Col: 1>
+
+SYMBOL TABLE (Identifiers)
+Name | First(Line,Col) | Frequency
+-----------------------------------
+Count_1 | (4,1) | 1
+Rate | (5,1) | 1
+Exp | (6,1) | 1
+Exp2 | (7,1) | 1
+Flag | (8,1) | 1
+Flag2 | (9,1) | 1
+Msg | (10,1) | 1
+Ch1 | (11,1) | 1
+Ch2 | (12,1) | 1
+Ch3 | (13,1) | 1
+Ch4 | (14,1) | 1
+Ch5 | (15,1) | 1
+Ch6 | (16,1) | 1
+Upper | (17,1) | 1
+A | (18,1) | 1
+Z9_ | (19,1) | 1
+A_0a1b2c3d4e5f6g7h8i9j0k1l2m3n4 | (20,1) | 1
+
+STATISTICS
+----------
+TOTAL_TOKENS      : 51
+LINES_PROCESSED   : 73
+COMMENTS_REMOVED  : 12
+
+COUNT PER TOKEN TYPE
+IDENTIFIER       : 17
+INT_LITERAL      : 5
+FLOAT_LITERAL    : 7
+STRING_LITERAL   : 7
+CHAR_LITERAL     : 8
+BOOL_LITERAL     : 2
+OP_ARITHMETIC    : 4
+EOF              : 1
+
+ERRORS
+------
+No lexical errors.
+
+
+==================== TEST 2 (test2.lang) ====================
+<IDENTIFIER, "Alpha", Line: 4, Col: 1>
+<IDENTIFIER, "Beta_1", Line: 5, Col: 1>
+<IDENTIFIER, "Gamma2", Line: 6, Col: 1>
+<IDENTIFIER, "Alpha", Line: 7, Col: 1>
+<IDENTIFIER, "Alpha", Line: 8, Col: 1>
+<IDENTIFIER, "Beta_1", Line: 9, Col: 1>
+<INT_LITERAL, "0", Line: 12, Col: 1>
+<INT_LITERAL, "10", Line: 13, Col: 1>
+<OP_ARITHMETIC, "-", Line: 14, Col: 1>
+<INT_LITERAL, "20", Line: 14, Col: 2>
+<OP_ARITHMETIC, "+", Line: 15, Col: 1>
+<INT_LITERAL, "7", Line: 15, Col: 2>
+<INT_LITERAL, "999", Line: 16, Col: 1>
+<FLOAT_LITERAL, "3.141592", Line: 19, Col: 1>
+<FLOAT_LITERAL, "2.5e2", Line: 20, Col: 1>
+<FLOAT_LITERAL, "1.000000", Line: 21, Col: 1>
+<OP_ARITHMETIC, "-", Line: 22, Col: 1>
+<FLOAT_LITERAL, "0.500001", Line: 22, Col: 2>
+<FLOAT_LITERAL, "9.999999e+2", Line: 23, Col: 1>
+<FLOAT_LITERAL, "2.0E-3", Line: 24, Col: 1>
+<BOOL_LITERAL, "true", Line: 27, Col: 1>
+<BOOL_LITERAL, "false", Line: 28, Col: 1>
+<BOOL_LITERAL, "true", Line: 29, Col: 1>
+<STRING_LITERAL, "\"Sum\\\\n\"", Line: 32, Col: 1>
+<STRING_LITERAL, "\"Tab\\\\t\"", Line: 33, Col: 1>
+<STRING_LITERAL, "\"Carriage\\\\r\"", Line: 34, Col: 1>
+<STRING_LITERAL, "\"Quote: \\\\\\\"Hello\\\\\\\"\"", Line: 35, Col: 1>
+<STRING_LITERAL, "\"Backslash: \\\\\\\\\"", Line: 36, Col: 1>
+<STRING_LITERAL, "\"Mix: A\\\\nB\\\\tC\\\\rD \\\\\\\\ \\\\\\\"end\\\\\\\"\"", Line: 37, Col: 1>
+<CHAR_LITERAL, "'A'", Line: 40, Col: 1>
+<CHAR_LITERAL, "'Z'", Line: 41, Col: 1>
+<CHAR_LITERAL, "'0'", Line: 42, Col: 1>
+<CHAR_LITERAL, "'\\n'", Line: 43, Col: 1>
+<CHAR_LITERAL, "'\\t'", Line: 44, Col: 1>
+<CHAR_LITERAL, "'\\r'", Line: 45, Col: 1>
+<CHAR_LITERAL, "'\\\\'", Line: 46, Col: 1>
+<CHAR_LITERAL, "'\\''", Line: 47, Col: 1>
+<IDENTIFIER, "Alpha", Line: 51, Col: 1>
+<IDENTIFIER, "Gamma2", Line: 56, Col: 1>
+<IDENTIFIER, "Finish", Line: 59, Col: 1>
+<EOF, "", Line: 60, Col: 1>
+
+SYMBOL TABLE (Identifiers)
+Name | First(Line,Col) | Frequency
+-----------------------------------
+Alpha | (4,1) | 4
+Beta_1 | (5,1) | 2
+Gamma2 | (6,1) | 2
+Finish | (59,1) | 1
+
+STATISTICS
+----------
+TOTAL_TOKENS      : 41
+LINES_PROCESSED   : 60
+COMMENTS_REMOVED  : 11
+
+COUNT PER TOKEN TYPE
+IDENTIFIER       : 9
+INT_LITERAL      : 5
+FLOAT_LITERAL    : 6
+STRING_LITERAL   : 6
+CHAR_LITERAL     : 8
+BOOL_LITERAL     : 3
+OP_ARITHMETIC    : 3
+EOF              : 1
+
+ERRORS
+------
+No lexical errors.
+
+
+==================== TEST 3 (test3.lang) ====================
+<STRING_LITERAL, "\"Quote: \\\" backslash: \\\\\"", Line: 4, Col: 1>
+<STRING_LITERAL, "\"Line1\\nLine2\\tTabbed\\rCarriage\"", Line: 5, Col: 1>
+<STRING_LITERAL, "\"Mix: \\\"A\\\" \\\\ \\n \\t \\r end\"", Line: 6, Col: 1>
+<STRING_LITERAL, "\"Just text\"", Line: 7, Col: 1>
+<STRING_LITERAL, "\"Escapes: \\\\ \\\" \\n \\t \\r\"", Line: 8, Col: 1>
+<CHAR_LITERAL, "'A'", Line: 11, Col: 1>
+<CHAR_LITERAL, "'Z'", Line: 12, Col: 1>
+<CHAR_LITERAL, "'0'", Line: 13, Col: 1>
+<CHAR_LITERAL, "'\\n'", Line: 14, Col: 1>
+<CHAR_LITERAL, "'\\t'", Line: 15, Col: 1>
+<CHAR_LITERAL, "'\\r'", Line: 16, Col: 1>
+<CHAR_LITERAL, "'\\\\'", Line: 17, Col: 1>
+<CHAR_LITERAL, "'\\''", Line: 18, Col: 1>
+<IDENTIFIER, "After", Line: 29, Col: 1>
+<STRING_LITERAL, "\"ok\"", Line: 30, Col: 1>
+<CHAR_LITERAL, "'\\n'", Line: 31, Col: 1>
+<EOF, "", Line: 32, Col: 1>
+
+SYMBOL TABLE (Identifiers)
+Name | First(Line,Col) | Frequency
+-----------------------------------
+After | (29,1) | 1
+
+STATISTICS
+----------
+TOTAL_TOKENS      : 17
+LINES_PROCESSED   : 32
+COMMENTS_REMOVED  : 5
+
+COUNT PER TOKEN TYPE
+IDENTIFIER       : 1
+STRING_LITERAL   : 6
+CHAR_LITERAL     : 9
+EOF              : 1
+
+ERRORS
+------
+ERROR [MALFORMED_LITERAL] Line 22, Col 1 | Lexeme=""bad escape: \\q"" | Reason=Malformed string literal
+ERROR [MALFORMED_LITERAL] Line 23, Col 1 | Lexeme=""unterminated string\r" | Reason=Unterminated string literal
+ERROR [MALFORMED_LITERAL] Line 24, Col 1 | Lexeme="'bad escape: \\q'" | Reason=Malformed character literal
+ERROR [MALFORMED_LITERAL] Line 25, Col 1 | Lexeme="'AB'" | Reason=Malformed character literal
+ERROR [MALFORMED_LITERAL] Line 26, Col 1 | Lexeme="'\r" | Reason=Unterminated character literal
+
+
+==================== TEST 4 (test4.lang) ====================
+<INT_LITERAL, "9", Line: 7, Col: 1>
+<KEYWORD, "start", Line: 7, Col: 2>
+<FLOAT_LITERAL, "12.3", Line: 21, Col: 1>
+<INT_LITERAL, "1", Line: 22, Col: 1>
+<PUNCTUATOR, ",", Line: 22, Col: 2>
+<INT_LITERAL, "000", Line: 22, Col: 3>
+<IDENTIFIER, "After_bad_str", Line: 28, Col: 1>
+<INT_LITERAL, "5", Line: 29, Col: 1>
+<EOF, "", Line: 45, Col: 1>
+
+SYMBOL TABLE (Identifiers)
+Name | First(Line,Col) | Frequency
+-----------------------------------
+After_bad_str | (28,1) | 1
+
+STATISTICS
+----------
+TOTAL_TOKENS      : 9
+LINES_PROCESSED   : 45
+COMMENTS_REMOVED  : 12
+
+COUNT PER TOKEN TYPE
+IDENTIFIER       : 1
+INT_LITERAL      : 4
+FLOAT_LITERAL    : 1
+KEYWORD          : 1
+PUNCTUATOR       : 1
+EOF              : 1
+
+ERRORS
+------
+ERROR [INVALID_IDENTIFIER] Line 5, Col 1 | Lexeme="abc" | Reason=Identifiers must start with uppercase letter (A-Z)
+ERROR [INVALID_CHARACTER] Line 6, Col 1 | Lexeme="_" | Reason=Unrecognized character
+ERROR [INVALID_IDENTIFIER] Line 6, Col 2 | Lexeme="count" | Reason=Identifiers must start with uppercase letter (A-Z)
+ERROR [INVALID_IDENTIFIER] Line 10, Col 1 | Lexeme="Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" | Reason=Identifier exceeds maximum length of 31 characters
+ERROR [INVALID_CHARACTER] Line 13, Col 1 | Lexeme="@" | Reason=Unrecognized character
+ERROR [INVALID_CHARACTER] Line 14, Col 1 | Lexeme="$" | Reason=Unrecognized character
+ERROR [INVALID_CHARACTER] Line 15, Col 1 | Lexeme="?" | Reason=Unrecognized character
+ERROR [MALFORMED_LITERAL] Line 18, Col 1 | Lexeme="12." | Reason=Missing digits after decimal point
+ERROR [MALFORMED_LITERAL] Line 19, Col 1 | Lexeme=".14" | Reason=Missing digits before decimal point
+ERROR [MALFORMED_LITERAL] Line 20, Col 1 | Lexeme="1.2345678" | Reason=Too many decimal digits (max 6)
+ERROR [MALFORMED_LITERAL] Line 21, Col 5 | Lexeme=".4" | Reason=Missing digits before decimal point
+ERROR [MALFORMED_LITERAL] Line 25, Col 1 | Lexeme=""Hello World\r" | Reason=Unterminated string literal
+ERROR [MALFORMED_LITERAL] Line 32, Col 1 | Lexeme=""Bad escape: \\x"" | Reason=Malformed string literal
+ERROR [MALFORMED_LITERAL] Line 35, Col 1 | Lexeme="''" | Reason=Malformed character literal
+ERROR [MALFORMED_LITERAL] Line 36, Col 1 | Lexeme="'AB'" | Reason=Malformed character literal
+ERROR [MALFORMED_LITERAL] Line 37, Col 1 | Lexeme="'\\q'" | Reason=Malformed character literal
+ERROR [MALFORMED_LITERAL] Line 38, Col 1 | Lexeme="'\r" | Reason=Unterminated character literal
+ERROR [UNCLOSED_MULTILINE_COMMENT] Line 41, Col 1 | Lexeme="#* this comment neve" | Reason=Multi-line comment never closed
+
+
+==================== TEST 5 (test5.lang) ====================
+<IDENTIFIER, "X", Line: 5, Col: 1>
+<INT_LITERAL, "1", Line: 6, Col: 1>
+<IDENTIFIER, "S", Line: 15, Col: 1>
+<STRING_LITERAL, "\"This is not a comment: ## hello\"", Line: 16, Col: 1>
+<IDENTIFIER, "T", Line: 17, Col: 1>
+<STRING_LITERAL, "\"Also not a comment: #* inside string *#\"", Line: 18, Col: 1>
+<IDENTIFIER, "Flag", Line: 23, Col: 1>
+<BOOL_LITERAL, "true", Line: 24, Col: 1>
+<IDENTIFIER, "Finish", Line: 30, Col: 1>
+<EOF, "", Line: 31, Col: 1>
+
+SYMBOL TABLE (Identifiers)
+Name | First(Line,Col) | Frequency
+-----------------------------------
+X | (5,1) | 1
+S | (15,1) | 1
+T | (17,1) | 1
+Flag | (23,1) | 1
+Finish | (30,1) | 1
+
+STATISTICS
+----------
+TOTAL_TOKENS      : 10
+LINES_PROCESSED   : 31
+COMMENTS_REMOVED  : 7
+
+COUNT PER TOKEN TYPE
+IDENTIFIER       : 5
+INT_LITERAL      : 1
+STRING_LITERAL   : 2
+BOOL_LITERAL     : 1
+EOF              : 1
+
+ERRORS
+------
+No lexical errors.
 
