@@ -1,0 +1,47 @@
+MyLang Lexical Grammar Specification:
+
+1. Identifiers * Pattern: [A-Z][a-z0-9_]{0,30}
+
+Rule: Must start with an uppercase letter (A-Z).
+
+Rule: Can be followed by lowercase letters, digits, or underscores.
+
+Limit: Maximum length is 31 characters.
+
+2. Integer Literals * Pattern: [+-]?[0-9]+
+
+Rule: A sequence of one or more digits.
+
+Rule: Optional leading sign (+ or -).
+
+3. Floating-Point Literals * Pattern: [+-]?[0-9]+\.[0-9]{1,6}([eE][+-]?[0-9]+)?
+
+Rule: Must contain a decimal point.
+
+Rule: Must have at least one digit before and 1 to 6 digits after the decimal.
+
+Rule: Optional exponent part using e or E.
+
+4. Boolean Literals * Values: true | false
+
+Rule: Recognized as reserved keywords for boolean logic.
+
+5. String Literals * Pattern: "([^"\\\n]|\\["\\ntr])*"
+
+Rule: Enclosed in double quotes.
+
+Rule: Supports escape sequences: \", \\, \n, \t, \r.
+
+Constraint: Cannot span multiple lines (no literal newlines).
+
+6. Character Literals * Pattern: '([^'\\\n]|\\['\\ntr])'
+
+Rule: Enclosed in single quotes.
+
+Rule: Must contain exactly one character or one valid escape sequence.
+
+7. Comments * Single-line: ##[^\n]*
+
+Multi-line: #* ... *#
+
+Rule: Comments must be skipped by the scanner but counted for statistics.
